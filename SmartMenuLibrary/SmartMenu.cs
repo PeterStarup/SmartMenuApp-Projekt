@@ -72,19 +72,30 @@ namespace SmartMenuLibrary
             string menupunkt = Console.ReadLine();
             if (menupunkt == "1")
             {
-                FunctionLibrary.Functions.DoThis();
+                Console.WriteLine(FunctionLibrary.Functions.DoThis());
             }
             else if(menupunkt == "2")
             {
-                FunctionLibrary.Functions.DoThat();
+                Console.WriteLine(FunctionLibrary.Functions.DoThat());
             }
             else if (menupunkt == "3")
             {
-                FunctionLibrary.Functions.DoSomething(menupunkt);
+                Console.WriteLine(FunctionLibrary.Functions.DoSomething(menupunkt));
             }
             else if (menupunkt == "4")
             {
                 Console.WriteLine(FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+            }
+            else
+            {
+                if (sprog == "d")
+                {
+                    Console.WriteLine("Du har ikke valgt et gyldigt mune punkt");
+                }
+                else if (sprog == "e")
+                {
+                    Console.WriteLine("You have not selected a valid menu point");
+                }
             }
         }
     }

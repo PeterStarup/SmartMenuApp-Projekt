@@ -1,12 +1,12 @@
-﻿Dansk:
+﻿Dansk version:
 Vælg noget
-1. bla;1
-2. blo;2
-3. bli;3
-4. blob;4
-English:
+1. Beregn areal og omkreds af rektangel;1
+2. Beregn talsum;2
+3. Beregn diverse udregninger;3
+4. Konverter Fahrenheit & Celsius;4
+English version:
 Choose something
-1. flob
-2. dolb
-3. durrr
-4. dope
+1. Calculate area & circumference of rectangle
+2. Calculate series of numbers
+3. Several calculations
+4. Convert Fahrenheit & Celsius

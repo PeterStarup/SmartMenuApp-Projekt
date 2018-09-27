@@ -21,9 +21,21 @@ namespace SmartMenuLibrary
             string[] heleTxt = System.IO.File.ReadAllLines(@"c:..\..\" + path + "");
             string[] danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
             string[] englishTxt = heleTxt.Skip(heleTxt.Length / 2).ToArray();
+            int[] callID = new int[danskTxt.Length - 2];
+            
 
-            Console.WriteLine(danskTxt[1]);
-            Console.WriteLine(englishTxt[3]);
+            for(int i = 0; i < danskTxt.Length; i++)
+            {
+                Console.WriteLine(danskTxt[i]);
+                int j = 0;
+                if (danskTxt[i].Contains(';'))
+                {
+                    string[] splitter = danskTxt[i].Split(';');
+                    callID[j] = int.Parse(splitter[1]);
+                    j++;
+                }
+            }
+            Console.WriteLine(callID[1]);
         }
         public void Activate()
         {

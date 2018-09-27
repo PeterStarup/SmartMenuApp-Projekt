@@ -69,6 +69,23 @@ namespace SmartMenuLibrary
                 Console.WriteLine("Du har ikke valgt et gyldigt sprog - You have not chosen a viable language");
                 goto label1;
             }
+            string menupunkt = Console.ReadLine();
+            if (menupunkt == "1")
+            {
+                FunctionLibrary.Functions.DoThis();
+            }
+            else if(menupunkt == "2")
+            {
+                FunctionLibrary.Functions.DoThat();
+            }
+            else if (menupunkt == "3")
+            {
+                FunctionLibrary.Functions.DoSomething(menupunkt);
+            }
+            else if (menupunkt == "4")
+            {
+                FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+            }
         }
     }
 }

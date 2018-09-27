@@ -44,7 +44,7 @@ namespace SmartMenuLibrary
         {
             label1:
             Console.WriteLine("Vælg sprog - Choose language: \n Tryk D for Dansk \n Press E for English");
-            string sprog = Console.ReadLine();
+            string sprog = Console.ReadLine().ToLower();
 
             if (sprog == "d")
             {

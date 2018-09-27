@@ -8,6 +8,9 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
+        string[] danskTxt;
+        string[] englishTxt;
+        int[] callID;
         public void LoadMenu(string path)
         {
             //splitter et array op i to lige store arrays
@@ -19,14 +22,14 @@ namespace SmartMenuLibrary
             */
 
             string[] heleTxt = System.IO.File.ReadAllLines(@"c:..\..\" + path + "");
-            string[] danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
-            string[] englishTxt = heleTxt.Skip(heleTxt.Length / 2).ToArray();
-            int[] callID = new int[danskTxt.Length - 2];
+            danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
+            englishTxt = heleTxt.Skip(heleTxt.Length / 2).ToArray();
+            callID = new int[danskTxt.Length - 2];
             
 
             for(int i = 0; i < danskTxt.Length; i++)
             {
-                Console.WriteLine(danskTxt[i]);
+                //Console.WriteLine(danskTxt[i]);
                 int j = 0;
                 if (danskTxt[i].Contains(';'))
                 {
@@ -35,23 +38,36 @@ namespace SmartMenuLibrary
                     j++;
                 }
             }
-            Console.WriteLine(callID[1]);
+            //Console.WriteLine(callID[1]);
         }
         public void Activate()
         {
+            label1:
             Console.WriteLine("Vælg sprog - Choose language: \n Tryk D for Dansk \n Press E for English");
             string sprog = Console.ReadLine();
+
             if (sprog == "d")
             {
-                Console.WriteLine("Du har valgt dansk\n" + danskTxt); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("Du har valgt dansk\n"); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                for(int i = 2; i < danskTxt.Length; i++)
+                {
+                    Console.WriteLine(danskTxt[i]);
+                }
+                Console.WriteLine("\n" + danskTxt[1]);
             }
             else if (sprog == "e")
             {
-                Console.WriteLine("You have chosen English\n" + englishTxt); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("You have chosen English\n"); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                for (int i = 2; i < englishTxt.Length; i++)
+                {
+                    Console.WriteLine(englishTxt[i]);
+                }
+                Console.WriteLine("\n" + englishTxt[1]);
             }
             else
             {
                 Console.WriteLine("Du har ikke valgt et gyldigt sprog - You have not chosen a viable language");
+                goto label1;
             }
         }
     }

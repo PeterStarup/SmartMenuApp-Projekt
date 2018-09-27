@@ -53,7 +53,7 @@ namespace SmartMenuLibrary
                 {
                     Console.WriteLine(danskTxt[i]);
                 }
-                Console.WriteLine("\n" + danskTxt[1]);
+                Console.WriteLine("\n" + "(" + danskTxt[1] + ")");
             }
             else if (sprog == "e")
             {
@@ -62,7 +62,7 @@ namespace SmartMenuLibrary
                 {
                     Console.WriteLine(englishTxt[i]);
                 }
-                Console.WriteLine("\n" + englishTxt[1]);
+                Console.WriteLine("\n" + "(" + englishTxt[1] + ")");
             }
             else
             {

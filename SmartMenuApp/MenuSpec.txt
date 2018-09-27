@@ -1,0 +1,13 @@
+﻿Dansk
+Vælg noget
+1. bla;1
+2. blo;2
+3. bli;3
+4. blob;4
+
+English
+Choose something
+1. flob
+2. dolb
+3. durrr
+4. dope

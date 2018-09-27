@@ -29,7 +29,7 @@ namespace SmartMenuLibrary
                     {
                         englishTxt[l] = heleTxt[i];
                     }
-                }
+                }//hallo hallo
             }
             Console.WriteLine(danskTxt[0]);
         }

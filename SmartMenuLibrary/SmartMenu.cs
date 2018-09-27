@@ -84,7 +84,7 @@ namespace SmartMenuLibrary
             }
             else if (menupunkt == "4")
             {
-                FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+                Console.WriteLine(FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything());
             }
         }
     }

@@ -31,6 +31,7 @@ namespace SmartMenuLibrary
                     }
                 }
             }
+            Console.WriteLine(danskTxt[0]);
         }
         public void Activate()
         {

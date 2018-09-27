@@ -10,6 +10,13 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
+            //splitter et array op i to lige store arrays
+            string[] testarray = { "bla", "bla1", "bla2", "bla3" };
+
+            string[] danskArray = testarray.Take(testarray.Length / 2).ToArray();
+            string[] engelskArray = testarray.Skip(testarray.Length / 2).ToArray();
+
+
             string[] heleTxt = System.IO.File.ReadAllLines(@"c:..\..\" + path + "");
             string[] danskTxt = new string[heleTxt.Length / 2];
             string[] englishTxt = new string[heleTxt.Length / 2];

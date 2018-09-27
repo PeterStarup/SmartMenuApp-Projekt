@@ -18,27 +18,11 @@ namespace SmartMenuLibrary
 
 
             string[] heleTxt = System.IO.File.ReadAllLines(@"c:..\..\" + path + "");
-            string[] danskTxt = new string[heleTxt.Length / 2];
-            string[] englishTxt = new string[heleTxt.Length / 2];
+            string[] danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
+            string[] englishTxt = heleTxt.Skip(heleTxt.Length / 2).ToArray();
 
-            for(int i = 0; i < heleTxt.Length; i++)
-            {
-                if(heleTxt[i] == "Dansk:")
-                {
-                    for(int j = 0; j < danskTxt.Length; j++)
-                    {
-                        danskTxt[j] = heleTxt[i];
-                    }
-                }
-                if(heleTxt[i] == "English:")
-                {
-                    for(int l = 0; l < englishTxt.Length; l++)
-                    {
-                        englishTxt[l] = heleTxt[i];
-                    }
-                }
-            }
-            Console.WriteLine(danskTxt[0]);
+            Console.WriteLine(danskTxt[1]);
+            Console.WriteLine(englishTxt[3]);
         }
         public void Activate()
         {

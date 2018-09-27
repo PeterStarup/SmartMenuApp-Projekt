@@ -29,17 +29,17 @@ namespace SmartMenuLibrary
 
             for(int i = 0; i < danskTxt.Length; i++)
             {
-                //Console.WriteLine(danskTxt[i]);
                 int j = 0;
                 if (danskTxt[i].Contains(';'))
                 {
                     string[] splitter = danskTxt[i].Split(';');
+                    danskTxt[i] = splitter[0];
                     callID[j] = int.Parse(splitter[1]);
                     j++;
                 }
             }
-            //Console.WriteLine(callID[1]);
         }
+
         public void Activate()
         {
             label1:

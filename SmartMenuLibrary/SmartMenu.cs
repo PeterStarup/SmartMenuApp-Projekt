@@ -11,12 +11,7 @@ namespace SmartMenuLibrary
         public void LoadMenu(string path)
         {
             //splitter et array op i to lige store arrays
-            /*
-            string[] testarray = { "bla", "bla1", "bla2", "bla3" };
-
-            string[] danskArray = testarray.Take(testarray.Length / 2).ToArray();
-            string[] engelskArray = testarray.Skip(testarray.Length / 2).ToArray();
-            */
+            
 
             string[] heleTxt = System.IO.File.ReadAllLines(@"c:..\..\" + path + "");
             string[] danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
@@ -26,16 +21,18 @@ namespace SmartMenuLibrary
 
             for(int i = 0; i < danskTxt.Length; i++)
             {
-                Console.WriteLine(danskTxt[i]);
+                //Console.WriteLine(danskTxt[i]);
                 int j = 0;
                 if (danskTxt[i].Contains(';'))
                 {
                     string[] splitter = danskTxt[i].Split(';');
+                    
                     callID[j] = int.Parse(splitter[1]);
+                    Console.WriteLine(callID[j]);
                     j++;
                 }
             }
-            Console.WriteLine(callID[1]);
+            
         }
         public void Activate()
         {
@@ -43,11 +40,11 @@ namespace SmartMenuLibrary
             string sprog = Console.ReadLine();
             if (sprog == "d")
             {
-                Console.WriteLine("Du har valgt dansk\n" + danskTxt); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("Du har valgt dansk\n" /*danskTxt*/); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
             }
             else if (sprog == "e")
             {
-                Console.WriteLine("You have chosen English\n" + englishTxt); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("You have chosen English\n" /*englishTxt*/); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
             }
             else
             {

@@ -10,7 +10,10 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            // Implement ...
+            string[] testarray = {"bla", "bla1", "bla2", "bla3"};
+
+            string[] danskArray = testarray.Take(testarray.Length / 2).ToArray();
+            string[] engelskArray = testarray.Skip(testarray.Length / 2).ToArray();
         }
         public void Activate()
         {

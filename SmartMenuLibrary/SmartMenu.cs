@@ -13,13 +13,7 @@ namespace SmartMenuLibrary
         int[] callID;
         public void LoadMenu(string path)
         {
-            //splitter et array op i to lige store arrays
-            /*
-            string[] testarray = { "bla", "bla1", "bla2", "bla3" };
 
-            string[] danskArray = testarray.Take(testarray.Length / 2).ToArray();
-            string[] engelskArray = testarray.Skip(testarray.Length / 2).ToArray();
-            */
 
             string[] heleTxt = System.IO.File.ReadAllLines(@"..\..\" + path + "");
             danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
@@ -48,7 +42,7 @@ namespace SmartMenuLibrary
 
             if (sprog == "d")
             {
-                Console.WriteLine("Du har valgt dansk\n"); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("Du har valgt dansk\n"); 
                 for(int i = 2; i < danskTxt.Length; i++)
                 {
                     Console.WriteLine(danskTxt[i]);
@@ -57,7 +51,7 @@ namespace SmartMenuLibrary
             }
             else if (sprog == "e")
             {
-                Console.WriteLine("You have chosen English\n"); /*vi skal have lavet så man kan hente de to string fra loadmenu metoden*/
+                Console.WriteLine("You have chosen English\n"); 
                 for (int i = 2; i < englishTxt.Length; i++)
                 {
                     Console.WriteLine(englishTxt[i]);

@@ -82,13 +82,13 @@ namespace SmartMenuLibrary
             }
             else if (menupunkt == "0")
             {
-                Console.WriteLine("Afslutter program - Stoping program");
+                Console.WriteLine("Afslutter program - Stopping program");
             }
             else
             {
                 if (sprog == "d")
                 {
-                    Console.WriteLine("Du har ikke valgt et gyldigt mune punkt");
+                    Console.WriteLine("Du har ikke valgt et gyldigt menu punkt");
                 }
                 else if (sprog == "e")
                 {

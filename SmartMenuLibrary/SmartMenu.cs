@@ -68,18 +68,22 @@ namespace SmartMenuLibrary
             if (menupunkt == "1")
             {
                 Console.WriteLine(FunctionLibrary.Functions.DoThis());
+                goto label2;
             }
             else if(menupunkt == "2")
             {
                 Console.WriteLine(FunctionLibrary.Functions.DoThat());
+                goto label2;
             }
             else if (menupunkt == "3")
             {
                 Console.WriteLine(FunctionLibrary.Functions.DoSomething(menupunkt));
+                goto label2;
             }
             else if (menupunkt == "4")
             {
                 Console.WriteLine(FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+                goto label2;
             }
             else if (menupunkt == "0")
             {

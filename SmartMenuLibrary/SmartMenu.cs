@@ -86,6 +86,10 @@ namespace SmartMenuLibrary
             {
                 Console.WriteLine(FunctionLibrary.Functions.GetTheAnswerToLifeTheUniverseAndEverything());
             }
+            else if (menupunkt == "0")
+            {
+                Console.WriteLine("Afslutter program - Stoping program");
+            }
             else
             {
                 if (sprog == "d")

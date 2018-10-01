@@ -1,11 +1,11 @@
 ﻿Dansk version:
-Vælg noget
+Vælg noget eller 0 for at afslutte
 1. Beregn areal og omkreds af rektangel;1
 2. Beregn talsum;2
 3. Beregn diverse udregninger;3
 4. Konverter Fahrenheit & Celsius;4
 English version:
-Choose something
+Choose something or 0 to stop program
 1. Calculate area & circumference of rectangle
 2. Calculate series of numbers
 3. Several calculations

@@ -63,6 +63,7 @@ namespace SmartMenuLibrary
                 Console.WriteLine("Du har ikke valgt et gyldigt sprog - You have not chosen a viable language");
                 goto label1;
             }
+            label2:
             string menupunkt = Console.ReadLine();
             if (menupunkt == "1")
             {
@@ -88,11 +89,13 @@ namespace SmartMenuLibrary
             {
                 if (sprog == "d")
                 {
-                    Console.WriteLine("Du har ikke valgt et gyldigt menu punkt");
+                    Console.WriteLine("Du har ikke valgt et gyldigt menu punkt. Prøv igen");
+                    goto label2;
                 }
                 else if (sprog == "e")
                 {
-                    Console.WriteLine("You have not selected a valid menu point");
+                    Console.WriteLine("You have not selected a valid menu point. Try again");
+                    goto label2;
                 }
             }
         }

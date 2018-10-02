@@ -99,6 +99,7 @@ namespace SmartMenuLibrary
         {
             if (lang == "d")
             {
+                Console.Clear();
                 Console.WriteLine("Du har valgt dansk\n");
                 for (int i = 2; i < danskTxt.Length; i++)
                 {
@@ -108,6 +109,7 @@ namespace SmartMenuLibrary
             }
             else if (lang == "e")
             {
+                Console.Clear();
                 Console.WriteLine("You have chosen English\n");
                 for (int i = 2; i < englishTxt.Length; i++)
                 {

@@ -63,7 +63,7 @@ namespace SmartMenuLibrary
                 {
                     Console.WriteLine("Du har ikke valgt et gyldigt sprog - You have not chosen a viable language");
                 }
-            } while (userInputSprog != "d" || userInputSprog != "e");
+            } while (userInputSprog != "d" && userInputSprog != "e");
 
             do
             {

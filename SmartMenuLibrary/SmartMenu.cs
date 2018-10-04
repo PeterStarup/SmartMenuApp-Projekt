@@ -12,24 +12,28 @@ namespace SmartMenuLibrary
         string[] englishTxt;
         int[] callID;
         string userInput = null, userInputSprog = null;
+        int counter;
         public void LoadMenu(string path)
         {
 
             string[] heleTxt = System.IO.File.ReadAllLines(@"..\..\" + path + "");
             danskTxt = heleTxt.Take(heleTxt.Length / 2).ToArray();
             englishTxt = heleTxt.Skip(heleTxt.Length / 2).ToArray();
-            callID = new int[danskTxt.Length - 2];
             
             for(int i = 0; i < danskTxt.Length; i++)
             {
-                int j = 0;
                 if (danskTxt[i].Contains(';'))
                 {
+                    counter++;
                     string[] splitter = danskTxt[i].Split(';');
                     danskTxt[i] = splitter[0];
-                    callID[j] = int.Parse(splitter[1]);
-                    j++;
                 }
+            }
+
+            callID = new int[counter];
+            for (int i = 0; i < counter; i++)
+            {
+                callID[i] = i + 1;
             }
         }
 

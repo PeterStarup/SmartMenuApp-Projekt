@@ -1,0 +1,10 @@
+﻿Calculator Menu
+Add;1
+Subtract;2
+Multiply;3
+Divide;4
+Sum;5
+Minimum;6
+Maximum;7
+Average;8
+Expression;9
